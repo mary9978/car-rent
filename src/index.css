@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hero {
+  @apply bg-blue-400 text-white p-3 mx-auto rounded-xl sm:max-w-[80%] max-h-[25rem]  
+
+} 
+.hero-title {
+  @apply sm:text-[30px] text-white lg:text-[40px] text-[30px] font-extrabold mb-4 w-[90%] 
+}
+
+.btn{
+  @apply text-white bg-blue-600 p-2 rounded-xl mt-4  
+}
