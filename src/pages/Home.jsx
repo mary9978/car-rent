@@ -1,22 +1,43 @@
+
+import Hero from "../components/Hero";
 import Layout from "./Layout";
+
+import PapularCar from "../components/Papular-car";
+
 
 const Home = () => {
   return (
       <Layout>
-       <div className="flex flex-col items-center align-center  gap-4 sm:flex-row mx-auto max-w-[1024px] px-6 " >
-        <div className="hero">
-          <h1 className="hero-title">The Beast Platform for CarRental</h1>
-          <p>Ease of doing a car rental sarely and reliably. Of course at a low price.</p>
-          <button className="btn">Rental car</button>
-          <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/countach/menu/menu_countach_lpi_01.png" alt="lamborgini" className="w-10/12 h-[90%] max-h-44 mx-auto" />
+       <div className="flex flex-col items-center align-center  gap-4 sm:flex-row mx-auto max-w-screen-[1440px] px-6 " >
+        <Hero />
+        <Hero />
         </div>
-        <div className="hero">
-          <h1 className="hero-title">The Beast Platform for CarRental</h1>
-          <p>Ease of doing a car rental sarely and reliably. Of course at a low price.</p>
-          <button className="btn">Rental car</button>
-          <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/countach/menu/menu_countach_lpi_01.png" alt="lamborgini" className="w-10/12 h-[90%] max-h-44 mx-auto" />
-        </div>
-       </div>
+
+        {/* start PickUp and PickOff */}
+
+        {/* end of PickUp and PickOff */}
+
+        {/* Papular Cars */}
+        <div className="flex justify-between items-center max-w-screen-[1440px] sm:mx-8 px-8 gap-4">
+          <p className="m-3 text-gray-400 font-extrabold">Papular Car</p>
+          <p className="m-3 text-blue-400 font-extrabold cursor-pointer hover:scale-[.99]">View All</p>
+         </div>
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-4  justify-center items-center mx-auto lg:flex-row">
+
+         <PapularCar/>
+         <PapularCar/>
+         <PapularCar/>
+         <PapularCar/>
+         <PapularCar/>
+         <PapularCar/>
+         <PapularCar/>
+         <PapularCar/>
+         <PapularCar/>
+         <PapularCar/>
+         <PapularCar/>
+         </div>
+        
+       
       </Layout>
       );
 } 
