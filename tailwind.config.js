@@ -2,7 +2,17 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        plusJakarta: ["Plus Jakarta Sans",'Nunito'],
+      },
+      colors: {
+        borderColor: "#C3D4E966",
+        blue: {
+          500: "#3563E9",
+        },
+      },
+    },
   },
   plugins: [],
 };
