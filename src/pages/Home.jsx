@@ -3,6 +3,8 @@ import Hero from "../components/Hero";
 import Layout from "./Layout";
 
 import PapularCar from "../components/Papular-car";
+import PickUp from "../components/PickUp";
+import {RiArrowUpDownFill} from 'react-icons/ri'
 
 
 const Home = () => {
@@ -16,11 +18,19 @@ const Home = () => {
         </div>
 
         {/* start PickUp and PickOff */}
-          <div>
+          <div className="flex flex-col lg:flex-row gap-2 justify-between items-center ">
+            <PickUp />
+            <button className="btn h-[63px] mt-4 p-0 ">
+              <RiArrowUpDownFill size={25} className="w-[63px] p-0 "/>
+            </button>
+            <PickUp />
+            
 
           </div>
         {/* end of PickUp and PickOff */}
+          <div>
 
+          </div>
         {/* Papular Cars */}
         <div className="flex justify-between items-center  text-center">
           <p className="m-3 text-gray-400 font-extrabold">Papular Car</p>
