@@ -1,11 +1,12 @@
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer.jsx";
 
 const Layout = ({children}) => {
     return ( 
         <>
             <Header/>
             {children}
-            <h1>this is footer</h1>
+            <Footer/>
         </>
      );
 }
