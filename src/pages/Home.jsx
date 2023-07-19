@@ -8,21 +8,25 @@ import PapularCar from "../components/Papular-car";
 const Home = () => {
   return (
       <Layout>
-       <div className="flex flex-col items-center align-center  gap-4 sm:flex-row mx-auto max-w-screen-[1440px] px-6 " >
+        <div className="mx-auto max-w-[1440px] ">
+
+       <div className="flex flex-col items-center align-center  gap-4 sm:flex-row  px-6 " >
         <Hero />
         <Hero />
         </div>
 
         {/* start PickUp and PickOff */}
+          <div>
 
+          </div>
         {/* end of PickUp and PickOff */}
 
         {/* Papular Cars */}
-        <div className="flex justify-between items-center max-w-screen-[1440px] sm:mx-8 px-8 gap-4">
+        <div className="flex justify-between items-center  text-center">
           <p className="m-3 text-gray-400 font-extrabold">Papular Car</p>
           <p className="m-3 text-blue-400 font-extrabold cursor-pointer hover:scale-[.99]">View All</p>
          </div>
-         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-4  justify-center items-center mx-auto lg:flex-row">
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-4  justify-center items-center  lg:flex-row ">
 
          <PapularCar/>
          <PapularCar/>
@@ -37,6 +41,11 @@ const Home = () => {
          <PapularCar/>
          </div>
         
+
+         <button className="btn block mx-auto mt-8">Show More Car</button>
+         </div>
+        
+       
        
       </Layout>
       );
