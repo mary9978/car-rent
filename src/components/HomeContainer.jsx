@@ -7,7 +7,7 @@ import Hero from "../components/Hero";
 
 function HomeContainer() {
   return (
-    <div className="mx-auto max-w-[1440px] ">
+    <div className="mx-auto max-w-[1440px] my-8">
 
        <div className="flex flex-col items-center align-center  gap-4 sm:flex-row  px-6 " >
         <Hero />
