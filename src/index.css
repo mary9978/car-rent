@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.hero {
+  @apply bg-blue-400 text-white p-3 mx-auto rounded-xl sm:max-w-[80%] max-h-[25rem]
+
+}
+.hero-title {
+  @apply  text-white xl:text-[40px] text-[30px] font-extrabold mb-4 w-[90%]
+}
+
+.btn{
+  @apply text-white w-fit bg-blue-600 p-2 rounded-xl  transition-all ease-linear duration-100
+}
+
+.btn:hover {
+  @apply scale-[1.1];
+}
+
+.form-group {
+  @apply flex  justify-between items-center gap-3 border w-full p-4 rounded-lg
+}
+
+
