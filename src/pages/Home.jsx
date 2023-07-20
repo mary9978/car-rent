@@ -10,6 +10,7 @@ import {RiArrowUpDownFill} from 'react-icons/ri'
 const Home = () => {
   return (
       <Layout>
+
         <div className="mx-auto max-w-[1440px] ">
 
        <div className="flex flex-col items-center align-center  gap-4 sm:flex-row  px-6 " >
@@ -24,7 +25,7 @@ const Home = () => {
               <RiArrowUpDownFill size={25} className="w-[63px] p-0 "/>
             </button>
             <PickUp />
-            
+
 
           </div>
         {/* end of PickUp and PickOff */}
@@ -50,13 +51,13 @@ const Home = () => {
          <PapularCar/>
          <PapularCar/>
          </div>
-        
+
 
          <button className="btn block mx-auto mt-8">Show More Car</button>
          </div>
-        
-       
-       
+
+
+
       </Layout>
       );
 } 
