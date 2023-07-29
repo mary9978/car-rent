@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import Input from "../Input/Input";
+import {FaUser} from 'react-icons/fa'
 import { BsHeartFill } from "react-icons/bs";
 import { userAuth } from "../../context/AuthContext";
 import {
@@ -7,6 +8,7 @@ import {
   MdSettings,
   MdMenu,
   MdClose,
+  MdOutlineArrowDropDown,
   MdOutlineLogin,
 } from "react-icons/md";
 import { userAvatar } from "../getAllImage";
@@ -14,6 +16,7 @@ import { useState } from "react";
 const Header = () => {
   const navigate = useNavigate();
   const [isOpenSidebar, setIsOpenSidebar] = useState(false);
+  const [isOpenDropdown, setIsOpenDropdown] = useState(false);
   const { user, logOut } = userAuth();
   const logoutHandler = async () => {
     try {
@@ -58,17 +61,67 @@ const Header = () => {
           <div className="bg-white w-11 h-11 rounded-full border border-borderColor flex justify-center items-center">
             <MdSettings fontSize={"24px"} color="rgb(89,103,128)" />
           </div>
+
           {user?.email ? (
-            <Link to="/account">
-              <img src={userAvatar} alt="" width={"44px"} height={"44px"} />
-            </Link>
-          ) : (
             <button
-              onClick={() => navigate("/signup")}
-              className="bg-blue-500 text-white rounded py-2 px-4 hover:bg-white hover:text-black hover:border hover:border-blue-500"
+              onClick={() => navigate("/login")}
+              className="flex  items-center  gap-x-3 bg-blue-500 text-white rounded py-2 px-4 hover:bg-white hover:text-black hover:border hover:border-blue-500"
             >
-              signUp
+              <MdOutlineLogin fontSize={"20px"} />
+              Log In
             </button>
+          ) : (
+              <>
+                
+
+              <div className="inline-flex bg-white border rounded-md">
+                <button
+                  href="#"
+                  className="px-2 py-2 text-sm text-gray-600 hover:text-gray-700 hover:bg-gray-50 rounded-l-md"
+                >
+                  <FaUser fontSize={"20px"} />
+                </button>
+
+                <div className="relative">
+                  <button
+                    onClick={() => setIsOpenDropdown(!isOpenDropdown)}
+                    type="button"
+                    className="inline-flex items-center justify-center h-full  text-gray-600  border-gray-100 hover:text-gray-700 rounded-r-md hover:bg-gray-50"
+                  >
+                    <MdOutlineArrowDropDown fontSize={"30px"} />
+                  </button>
+                  {isOpenDropdown && (
+                    <div className="absolute -right-40 z-10 w-56 mt-2 origin-top-right bg-white border border-gray-100 rounded-md shadow-lg">
+                      <div className="p-2">
+                        <a
+                          href="#"
+                          className="block px-4 py-2 text-sm text-gray-500 rounded-lg hover:bg-gray-50 hover:text-gray-700"
+                        >
+                          ReactJS Dropdown 1
+                        </a>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 text-sm text-gray-500 rounded-lg hover:bg-gray-50 hover:text-gray-700"
+                        >
+                            Log Out
+                            <MdOutlineLogin font/>
+                        </a>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                </div>
+                
+
+
+              <button
+                onClick={() => navigate("/signup")}
+                className="flex  items-center  gap-x-3 bg-blue-500 text-white rounded py-2 px-4 hover:bg-white hover:text-black hover:border hover:border-blue-500"
+              >
+                <MdOutlineLogin fontSize={"20px"} />
+                Sign up
+              </button>
+            </>
           )}
         </div>
       </nav>
@@ -117,6 +170,7 @@ const Header = () => {
                   </Link>
                 </div>
                 <div className="py-6 flex">
+                  {/* {user ?.email ? () : ()} */}
                   <div
                     onClick={logoutHandler}
                     className="flex flex-row justify-center -mx-3 items-center gap-2 rounded-lg px-3 py-2.5 font-plusJakarta text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
