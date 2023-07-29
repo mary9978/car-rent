@@ -1,35 +1,36 @@
 import { Link, useNavigate } from "react-router-dom";
-import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from "react-hot-toast";
 import Layout from "./Layout";
 import { useState } from "react";
-import { userAuth } from "../context/AuthContext"; 
+import { userAuth } from "../context/AuthContext";
 import { useFormik } from "formik";
 import { basicSchema } from "../schemas";
+
 function SignUp() {
-  const {  signUp } = userAuth("");
+  const { signUp } = userAuth("");
   const [error, setError] = useState(null);
   const navigate = useNavigate();
-   const  initialValues = {
-      email: "",
-      password:""
-   }
-      const handleSubmit = async (values, actions) => {
-        setError(null);
-        try {
-          await signUp(values.email, values.password);
-          navigate("/");
-        } catch (error) {
-          setError(error.message);
-        }
-        if (!error) {
-          toast("you are now sign in");  
-        }
-        actions.resetForm();
-      };
+  const initialValues = {
+    email: "",
+    password: "",
+  };
+  const handleSubmit = async (values, actions) => {
+    setError(null);
+    try {
+      await signUp(values.email, values.password);
+      navigate("/");
+    } catch (error) {
+      setError(error.message);
+    }
+    if (!error) {
+      toast("you are now sign in");
+    }
+    actions.resetForm();
+  };
   const formik = useFormik({
     initialValues: initialValues,
     onSubmit: handleSubmit,
-    validationSchema : basicSchema
+    validationSchema: basicSchema,
   });
   return (
     <Layout>
@@ -75,7 +76,7 @@ function SignUp() {
                     success: {
                       style: {
                         border: "2px solid #3563E9",
-                        padding:"0.5rem"
+                        padding: "0.5rem",
                       },
                     },
                   }}

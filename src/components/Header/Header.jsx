@@ -24,7 +24,7 @@ const Header = () => {
   };
   return (
     <header className="h-38 lg:h-28 bg-white border-b-2">
-      <nav className="mx-auto   flex items-center justify-between p-6 lg:px-8">
+      <nav className="mx-auto flex items-center justify-between p-6 lg:px-12 max-w-screen-2xl">
         <div className="flex lg:flex-1 items-center gap-x-8">
           <div className="basis-1/4">
             <Link to="/">
@@ -63,7 +63,10 @@ const Header = () => {
               <img src={userAvatar} alt="" width={"44px"} height={"44px"} />
             </Link>
           ) : (
-            <button onClick={()=> navigate('/signup')} className="bg-blue-500 text-white rounded py-2 px-4 hover:bg-white hover:text-black hover:border hover:border-blue-500">
+            <button
+              onClick={() => navigate("/signup")}
+              className="bg-blue-500 text-white rounded py-2 px-4 hover:bg-white hover:text-black hover:border hover:border-blue-500"
+            >
               signUp
             </button>
           )}

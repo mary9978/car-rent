@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <footer className="  bottom-0 right-0 left-0 p-7">
-      <div className="mb-4 grid md:grid-cols-6 grid-cols-2 md:gap-y-0 gap-y-8">
+    <footer className="bottom-0 right-0 left-0 py-7  bg-white">
+      <div className="mb-4 grid md:grid-cols-6 grid-cols-2 md:gap-y-0 gap-y-8 max-w-screen-2xl px-12 mx-auto">
         <div className="md:col-span-3 col-span-2 md:my-0 my-4">
           <div className="grid grid-cols-4">
             <div className="lg:col-span-2 col-span-3">
@@ -70,7 +70,7 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <div className="my-4 flex flex-col md:flex-row md:justify-between">
+      <div className="my-4 flex flex-col md:flex-row md:justify-between max-w-screen-2xl px-12 mx-auto">
         <div>
           <h2 className="text-center font-plusJakarta text-base">
             ©2022 MORENT. All rights reserved
