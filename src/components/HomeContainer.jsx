@@ -7,9 +7,9 @@ import Hero from "../components/Hero";
 
 function HomeContainer() {
   return (
-    <div className="mx-auto max-w-[1440px] my-8">
+    <div className="mx-auto max-w-[1440px] my-8 bg-gray-200 py-3 rounded-lg">
 
-       <div className="flex flex-col items-center align-center  gap-4 sm:flex-row  px-6 " >
+       <div className="flex flex-col items-center align-center  gap-4 sm:flex-row  px-6  " >
         <Hero />
         <Hero />
         </div>
@@ -17,7 +17,7 @@ function HomeContainer() {
         {/* start PickUp and PickOff */}
           <div className="flex flex-col lg:flex-row gap-2 justify-between items-center ">
             <PickUp />
-            <button className="btn h-[63px] mt-4 p-0 ">
+            <button className="btn h-[63px] mt-4 p-0 shadow-[5px_5px_5px_5px_rgba(37,99,235,0.3)] ">
               <RiArrowUpDownFill size={25} className="w-[63px] p-0 "/>
             </button>
             <PickUp />

@@ -8,7 +8,7 @@ function PapularCar() {
   return (
     <>
       
-         <div className="h-fit sm:w-[300px] mx-auto border p-4 w-[90%] bg-gray-100 rounded-lg 	">
+         <div className="h-fit sm:w-[300px] mx-auto border p-4 w-[90%] bg-white rounded-lg 	">
           <div className="flex justify-between items-center">
           <p className="font-semibold">lamborghini</p>
             <AiOutlineHeart size={20} className='hover:scale-[1.2] transition-all ease-linear duration-100 cursor-pointer'/>

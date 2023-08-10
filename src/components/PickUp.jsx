@@ -2,13 +2,13 @@ import React from 'react'
 
 function PickUp() {
   return (
-    <div className='w-[90%] lg:w-full mx-5 my-4'>
+    <div className='w-[90%] lg:w-full mx-5 my-4 border rounded-lg bg-white p-5'>
 
     <div>
       <input type="radio" id="Pick-Up" name="fav_language" value="Pick-Up" checked />
      <label for="Pick-Up" className='font-bold pl-3'>Pick-Up</label>
 <div>
-  <form className='form-group'>
+  <form className='form-group '>
     {/* location */}
     <div>
 
